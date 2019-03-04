@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/buttonHappy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="403dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBored"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/happyface" />
+
+    <ImageButton
+        android:id="@+id/buttonSad"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="403dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAngry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonHappy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sadface" />
+
+    <ImageButton
+        android:id="@+id/buttonBored"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAngry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHappy"
+        app:srcCompat="@drawable/boredface" />
+
+    <ImageButton
+        android:id="@+id/buttonAngry"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonBored"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSad"
+        app:srcCompat="@drawable/angryface" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="28dp"
+        android:text="Mood Switcher"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
+        android:onClick="returnMain"
+        android:text="Return"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAngry"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/volumeBar"
+        android:layout_width="222dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginRight="95dp"
+        android:layout_marginBottom="32dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHappy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoView" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="380dp"
+        android:layout_height="209dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+</android.support.constraint.ConstraintLayout>
